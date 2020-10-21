@@ -451,16 +451,3 @@ print("Final training error: ", E_training_sg[5000])
 print("Final test error: ", E_test_sg[5000])
 print("Elapsed time: ", elapsed_time)
 
-
-# In[48]:
-
-
-#Testing
-testimages = np.array([[.1, .25, .6], [.8, .7, .8]])
-testweights = np.array([[.9], [.5]])
-testy = prob1(testweights, testimages)
-testlabels = np.array([1, 0, 1])
-testE = loglikelihood(testlabels, testy, testweights, testimages, 3)
-testgrad = gradient(testy, testimages, testlabels, 3)
-print(testgrad)
-
